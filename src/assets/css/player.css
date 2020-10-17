@@ -1,0 +1,52 @@
+body {
+  background-color: #f0f0f0;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.upload-container {
+  text-align: center;
+}
+.uploadBtn {
+  margin-left: 1rem;
+  text-align: center;
+  margin: auto;
+  background-color: #39bfd3;
+  width: 100px;
+  margin: auto;
+  display: inline-block;
+  padding: 15px 45px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.uploadBtn:active {
+  box-shadow: none;
+}
+#file {
+  display: none;
+}
+
+.video-container {
+  width: 90%;
+  margin: 2rem auto;
+}
+.red-text {
+  color: #f38181;
+}
+
+.normal-text {
+  line-height: 2.14rem;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8rem;
+  color: rgba(1, 1, 1, 0.6);
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="video,video player,ビデオプレーヤー">
+    <meta name="description" content="完全無料・会員登録不要で使える、速度変更可能なビデオプレーヤー">
+
+    <title>LocalVideoFilePlayer</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <link rel="manifest" href="./manifest.json">
+    <meta property="og:site_name" content="LocalVideoFilePlayer">
+    <meta property="og:title" content="LocalVideoFilePlayer">
+    <meta property="og:description" content="完全無料・会員登録不要で使える、速度変更可能なビデオプレーヤー">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/og.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="top" class="content">
+            <h1>Local Video File Player</h1>
+            <p>ローカルにあるビデオを再生できるプレーヤーです。<br>
+                <b>完全無料、会員登録不要、サーバーとの通信不要。</b><br>
+                手軽に使えるビデオプレーヤーです。</p>
+            <a href="./player.html" class="btn bg_yellow">今すぐ使う</a>
+        </div>
+        <!-- wave -->
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill-opacity="1"
+                d="M0,160L60,138.7C120,117,240,75,360,80C480,85,600,139,720,181.3C840,224,960,256,1080,240C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+    <section id="about">
+        <h2>FEATURES</h2>
+        <h3>Why LVFP?</h3>
+        <hr>
+        <p class="normal-text">
+            Local Video File Playerはビデオプレーヤーを探す煩わしさを解消するために構築されたWebビデオプレーヤーです。<br>
+            多くのブラウザで使用することができます。
+        </p>
+        <div class="features">
+            <div class="features_item">
+                <div class="icon">
+                    <img src="./assets/svg/login.svg" alt="login">
+                </div>
+                <div class="title">
+                    シンプル
+                </div>
+                <p class="normal-text">
+                    煩わしい会員登録は不要。
+                    費用も一切かかりません。邪魔な広告も存在しません。
+                    いつでも使いたい時にすぐに使用できます。
+                </p>
+            </div>
+            <div class="features_item">
+                <div class="icon">
+                    <img src="./assets/svg/player.svg" alt="video">
+                </div>
+                <div class="title">
+                    利便性
+                </div>
+                <p class="normal-text">
+                    0.25倍から4倍までの速度変更に対応。シンプルで便利な機能を提供しています。
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="immediately">
+        <a href="./player.html" class="btn bg_yellow btn-bg">今すぐ使う</a>
+    </section>
+    <footer>
+        <a href="https://twitter.com/natsume_aurlia" class="normal-text">contact:@natsume_aurlia</a>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').then(registration => {
+                console.log('ServiceWorker registration successful.');
+            }).catch(err => {
+                console.log('ServiceWorker registration failed.');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=”viewport” content=”width=device-width,minimum-scale=1,initial-scale=1″>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="video,video player,ビデオプレーヤー">
+    <meta name="description" content="完全無料・会員登録不要で使える、速度変更可能なビデオプレーヤー">
+
+    <title>LocalVideoFilePlayer</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/player.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+</head>
+
+<body>
+    <div id="upload-container">
+        <label for="file" class="uploadBtn">
+            選択
+        </label>
+        <input id="file" type="file" accept="video/*" />
+
+        <span id="file-name"></span>
+    </div>
+    <div class="video-container">
+        <video id="video" controls></video>
+    </div>
+    <footer>
+        <a href="https://twitter.com/natsume_aurlia" class="normal-text">contact:@natsume_aurlia</a>
+    </footer>
+
+    <script src="https://cdn.plyr.io/3.6.2/plyr.polyfilled.js"></script>
+    <script src="./assets/js/video.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').then(registration => {
+                console.log('ServiceWorker registration successful.');
+            }).catch(err => {
+                console.log('ServiceWorker registration failed.');
+            });
+        }
+    </script>
+</body>
+
+</html>
