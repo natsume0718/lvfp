@@ -20,7 +20,7 @@ a {
 }
 
 .content {
-  max-width: 55%;
+  max-width: 60%;
   padding: 100px 50px 250px;
   color: #f0f0f0;
 }
@@ -100,12 +100,13 @@ a {
   width: 100%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 
 .features .features_item {
-  width: 30%;
+  width: 40%;
 }
 
 .features .features_item .icon {
