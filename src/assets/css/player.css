@@ -39,6 +39,9 @@ a {
   width: 90%;
   margin: 2rem auto;
 }
+video {
+  max-height: 95vh !important;
+}
 .red-text {
   color: #f38181;
 }
