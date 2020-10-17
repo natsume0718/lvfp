@@ -1,21 +1,7 @@
 (function () {
   "use strict";
-  var url = window.URL || window.webkitURL;
-  var playSelectedFile = function (event) {
-    var file = this.files[0];
-    var type = file.type;
-    var name = file.name;
-    var videoNode = document.querySelector("video");
-    var fileNameNode = document.querySelector("#file-name");
-
-    // var canPlay = videoNode.canPlayType(type);
-    fileNameNode.innerHTML = name;
-
-    var fileUrl = url.createObjectURL(file);
-    videoNode.src = fileUrl;
-  };
   var inputNode = document.querySelector("#file");
-  inputNode.addEventListener("change", playSelectedFile, false);
+  inputNode.addEventListener("change", setVideo, false);
   new Plyr("#video", {
     settings: ["captions", "quality", "speed", "loop"],
     speed: {
@@ -41,3 +27,17 @@
     },
   });
 })();
+
+function setVideo(event) {
+  // webkitブラウザ対応
+  var url = window.URL || window.webkitURL;
+  var file = this.files[0];
+  var name = file.name;
+  var videoNode = document.querySelector("video");
+  var fileNameNode = document.querySelector("#file-name");
+
+  fileNameNode.innerHTML = name;
+
+  var fileUrl = url.createObjectURL(file);
+  videoNode.src = fileUrl;
+}
